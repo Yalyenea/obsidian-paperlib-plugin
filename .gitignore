@@ -4,7 +4,6 @@
 # Intellij
 *.iml
 .idea
-
 # npm
 node_modules
 
@@ -14,6 +13,8 @@ main.js
 
 # Exclude sourcemaps
 *.map
+# Exclude zip files
+*.zip
 
 # obsidian
 data.json
