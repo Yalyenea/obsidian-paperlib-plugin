@@ -8,7 +8,7 @@ interface PaperlibIntegrationSettings {
 
 const DEFAULT_SETTINGS: PaperlibIntegrationSettings = {
 	paperNotesFolder: 'papers',
-	paperNoteTemplate: '---\ntitle: {{title}}\nauthors: {{authors}}\nyear: {{year}}\ndoi: {{doi}}\n---# {{title}}\n\n## Summary\n\n## Notes\n\n',
+	paperNoteTemplate: '---\n\ntitle: {{title}}\nauthors: {{authors}}\nyear: {{year}}\ndoi: {{doi}}\n---\n\n# {{title}}\n\n## Summary\n\n## Notes\n\n',
 	protocolHandlerEnabled: true
 }
 
