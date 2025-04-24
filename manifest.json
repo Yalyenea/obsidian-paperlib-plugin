@@ -1,6 +1,6 @@
 {
-	"id": "paperlib-obsidian-integration",
-	"name": "PaperLib Integration",
+	"id": "paperlib integration",
+	"name": "Paperlib Integration",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Integrates Obsidian with PaperLib for academic paper management.",
