@@ -1,4 +1,4 @@
-import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting, TFile, TFolder } from 'obsidian';
+import { App, Modal, Notice, Plugin, PluginSettingTab, Setting, TFile, TFolder } from 'obsidian';
 
 interface PaperlibIntegrationSettings {
 	paperNotesFolder: string;
@@ -8,7 +8,7 @@ interface PaperlibIntegrationSettings {
 
 const DEFAULT_SETTINGS: PaperlibIntegrationSettings = {
 	paperNotesFolder: 'papers',
-	paperNoteTemplate: '---\ntitle: {{title}}\nauthors: {{authors}}\nyear: {{year}}\ndoi: {{doi}}\n---\n\n# {{title}}\n\n## Summary\n\n\n## Notes\n\n',
+	paperNoteTemplate: '---\ntitle: {{title}}\nauthors: {{authors}}\nyear: {{year}}\ndoi: {{doi}}\n---# {{title}}\n\n## Summary\n\n## Notes\n\n',
 	protocolHandlerEnabled: true
 }
 
@@ -19,10 +19,10 @@ export default class PaperlibIntegration extends Plugin {
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('file-text', 'PaperLib Integration', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('PaperLib Integration is active');
-		});
+		// const ribbonIconEl = this.addRibbonIcon('file-text', 'PaperLib Integration', (evt: MouseEvent) => {
+		// 	// Called when the user clicks the icon.
+		// 	new Notice('PaperLib Integration is active');
+		// });
 
 		// Register protocol handler for paperlib:// URLs
 		if (this.settings.protocolHandlerEnabled) {
