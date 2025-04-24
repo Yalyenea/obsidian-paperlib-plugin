@@ -1,50 +1,48 @@
-# Obsidian PaperLib Integration
+# PaperLib Obsidian Integration
 
-This plugin enables integration between Obsidian and PaperLib, allowing you to open and manage academic paper notes in Obsidian directly from PaperLib.
+This plugin integrates PaperLib with Obsidian, enabling seamless management of academic paper notes directly within Obsidian.
 
 ## Features
 
-- Creates and manages paper notes in a dedicated folder
-- Supports custom note templates with metadata from PaperLib
-- Handles the `obsidian://paperlib` protocol to open notes directly from PaperLib
-- Provides commands to manually create paper notes and access the papers folder
+- Open or create paper notes in Obsidian directly from PaperLib using the `obsidian://` protocol.
+- Customize note templates with placeholders for metadata such as title, authors, year, DOI, and ID.
+- Specify a custom folder for storing paper notes.
+- Manually create paper notes within Obsidian.
+- Bi-directional navigation between PaperLib and Obsidian.
 
 ## Installation
 
-1. Download the plugin from the releases page
-2. Extract the zip file into your Obsidian plugins folder
-3. Enable the plugin in Obsidian settings
+### Production Environment
+1. Download the latest plugin package from the [Releases](https://github.com/yourusername/obsidian-paperlib-plugin/releases) page.
+2. Extract the package into your Obsidian plugins folder (e.g., `YourVault/.obsidian/plugins/paperlib-obsidian-integration/`).
+3. Enable the plugin in Obsidian settings.
+
+### Development Environment
+```bash
+npm install
+npm run build
+```
 
 ## Usage
 
 ### Opening Notes from PaperLib
+- Select a paper in PaperLib, right-click and choose "Open in Obsidian" or use the command palette.
+- The first time you open a paper, a new note will be created with metadata automatically filled in.
+- Subsequent openings will directly navigate to the existing note.
 
-When you use the PaperLib plugin to open a paper in Obsidian, this plugin will:
-
-1. Create a new note for the paper if it doesn't exist
-2. Fill in the note with metadata from PaperLib using your template
-3. Open the note in Obsidian
-
-### Manual Note Creation
-
-You can also create paper notes manually in Obsidian:
-
-1. Open the command palette (Ctrl/Cmd + P)
-2. Search for "PaperLib: Create new paper note"
-3. Fill in the paper details in the modal
+### Manually Creating Paper Notes in Obsidian
+- Open the command palette and search for `PaperLib: Create new paper note`.
+- Fill in the paper details in the modal to create a new note.
 
 ## Configuration
 
 ### Settings
-
-- **Papers Folder**: The folder where paper notes will be stored
-- **Note Template**: Template for new paper notes, with placeholders for paper metadata
-- **Enable Protocol Handler**: Allow opening notes directly from PaperLib
+- **Papers Folder**: Define the folder where paper notes will be stored.
+- **Note Template**: Customize the template for new paper notes using placeholders like `{{title}}`, `{{authors}}`, `{{year}}`, `{{doi}}`, and `{{id}}`.
+- **Enable Protocol Handler**: Allow opening notes directly from PaperLib using the `obsidian://` protocol.
 
 ### Template Placeholders
-
 You can use the following placeholders in your note template:
-
 - `{{title}}`: The paper title
 - `{{authors}}`: The paper authors
 - `{{year}}`: The publication year
@@ -65,9 +63,8 @@ npm install
 npm run build
 ```
 
-## Manually installing the plugin
-
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/paperlib-obsidian-integration/`.
+## Manual Installation
+- Copy `main.js`, `styles.css`, and `manifest.json` to your vault's plugin folder: `VaultFolder/.obsidian/plugins/paperlib-obsidian-integration/`.
 
 ## License
 
