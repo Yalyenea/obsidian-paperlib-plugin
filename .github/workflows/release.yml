@@ -4,10 +4,9 @@ on:
   push:
     tags:
       - "*"
-permissions: write-all
 
 env:
-  PLUGIN_NAME: obsidian-paperlib-plugin # Change this to match the id of your plugin.
+  PLUGIN_NAME: Paperlib Integration # Change this to match the id of your plugin.
 
 jobs:
   build:
