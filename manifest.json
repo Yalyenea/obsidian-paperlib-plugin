@@ -1,9 +1,9 @@
 {
-	"id": "paperlib integration",
+	"id": "paperlib-integration",
 	"name": "Paperlib Integration",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Integrates Obsidian with PaperLib for academic paper management.",
+	"description": "Integrates with PaperLib for academic paper management.",
 	"author": "Yalyenea",
 	"authorUrl": "https://github.com/Yalyenea",
 	"isDesktopOnly": true
