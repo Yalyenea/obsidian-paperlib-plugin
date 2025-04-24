@@ -5,7 +5,7 @@ on:
     tags:
       - "*"
 permissions:
-  contents: write
+  contents: write-all
 
 env:
   PLUGIN_NAME: obsidian-paperlib-plugin # Change this to match the id of your plugin.
