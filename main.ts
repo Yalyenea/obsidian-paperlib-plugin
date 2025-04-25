@@ -125,8 +125,13 @@ export default class PaperlibIntegration extends Plugin {
 
 				if (folder && folder instanceof TFolder) {
 					// Open the folder in the file explorer
-					this.app.workspace.getLeaf().openFile(folder.children[0] as TFile);
-					new Notice(`Opened papers folder: ${folderPath}`);
+					const firstChild = folder.children[0];
+					if (firstChild instanceof TFile) {
+						this.app.workspace.getLeaf().openFile(firstChild);
+						new Notice(`Opened papers folder: ${folderPath}`);
+					} else {
+						new Notice(`No file found in papers folder: ${folderPath}`);
+					}
 				} else {
 					new Notice(`Papers folder not found: ${folderPath}`);
 				}
